@@ -3,6 +3,7 @@ while True:
     num1 = float(input("Please enter the number 1: "))
     num2 = float(input("Please enter the number 2: "))
 
+    print("Please select operation from the below Menu: ")
     print("1. Addition")
     print("2. subtraction")
     print("3. Multiplication")
