@@ -1,7 +1,7 @@
 #Second day of my AI learning journey
 # building a calculator
-num1 = int(input("Enter the num1:"))
-num2 = int(input("Enter the num2:"))
+num1 = float(input("Enter the num1:"))
+num2 = float(input("Enter the num2:"))
 
 choice = int(input("Enter your choice between 1 and 4: "))
 if choice == 1:
@@ -12,8 +12,10 @@ elif choice == 3:
     print("Result:", num1 * num2)
 elif choice == 4:
     print("Result:", num1 / num2)
+elif choice == 5:
+    print("Result:", num1 % num2")
 else:
-    print("Invalid choice")
+    print("Invalid Choice")
                     
 
 print("Addition", num1 + num2)
