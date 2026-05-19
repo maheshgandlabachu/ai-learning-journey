@@ -21,6 +21,7 @@ while True:
         tasks.append(task)
 
         print("Task added successfully!")
+        print (tasks)
 
     # View Tasks
     elif choice == "2":
