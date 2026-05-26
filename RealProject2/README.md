@@ -17,20 +17,31 @@ python SpellBee.py
 3. **Android (Chrome):** Menu → *Install app* or *Add to Home screen*.
 4. **iPhone (Safari):** Share → *Add to Home Screen*.
 
-## How to play
+## Word sources
 
-1. Pick difficulty and number of words.
-2. Read the **definition** and **sentence** (blank = missing word).
-3. Type the correct spelling and tap **Submit**.
-4. Use **Hear** for text-to-speech (where supported).
-5. Use **Hint** once per word (first letter).
+| Mode | Description |
+|------|-------------|
+| **Internet (default)** | Random English words + definitions from free global dictionary APIs |
+| **Local backup** | `data/words.json` on your PC (120 words) |
+| **Auto fallback** | Uses local list if the internet is down |
+
+Your **PC must be online** when you start a round. The phone only needs Wi-Fi to reach the PC.
+
+## How to play (real Spell Bee style)
+
+1. Pick difficulty, word source, and number of words.
+2. **Hear the word** — it plays automatically (tap again to repeat).
+3. **Type the spelling** and tap **Submit**.
+4. Optional: tap **Definition** or **Use in a sentence** only if you need help (like a real bee).
+5. See your score at the end.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
 | `SpellBee.py` | Server |
-| `data/words.json` | Word lists (easy / medium / hard) |
+| `online_words.py` | Fetches words from the internet |
+| `data/words.json` | Local backup word lists |
 | `templates/index.html` | Screens |
 | `static/app.js` | Game logic |
 | `static/style.css` | Mobile UI |

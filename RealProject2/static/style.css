@@ -150,6 +150,13 @@ body {
   color: var(--text);
 }
 
+.word-bank-info {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
 .hint {
   text-align: center;
   font-size: 0.78rem;
@@ -180,45 +187,120 @@ body {
   margin: 0 0 16px;
 }
 
-.card {
+.word-stage {
   background: var(--surface);
   border-radius: var(--radius);
-  padding: 18px;
+  padding: 24px 18px;
+  margin-bottom: 14px;
+  border: 2px solid var(--accent);
+  text-align: center;
+}
+
+.stage-label {
+  margin: 0 0 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.btn-hear {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #2a1040;
+  cursor: pointer;
+  min-height: 56px;
+}
+
+.btn-hear:active {
+  transform: scale(0.98);
+}
+
+.volume-tip {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--accent);
+  background: rgba(255, 201, 60, 0.12);
+  border: 1px solid rgba(255, 201, 60, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.speaking-status {
+  min-height: 1.2em;
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.btn-hear.speaking {
+  animation: pulse-speak 0.8s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(255, 201, 60, 0.6);
+}
+
+@keyframes pulse-speak {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.stage-note {
+  margin: 14px 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.clue-panel {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px 16px;
   margin-bottom: 14px;
   border: 1px solid var(--surface2);
 }
 
-.card .label {
+.clue-panel.hidden {
+  display: none;
+}
+
+.clue-panel .label {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   font-weight: 700;
 }
 
-.clue {
-  margin: 0 0 14px;
-  font-size: 1.05rem;
+.clue-text {
+  margin: 0;
+  font-size: 1rem;
   line-height: 1.5;
-}
-
-.clue.sentence {
-  font-style: italic;
-  color: var(--muted);
-  margin-bottom: 0;
-}
-
-.length-hint {
-  margin: 12px 0 0;
-  font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .actions-row {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 16px;
+}
+
+.actions-row-2 .btn-small {
+  font-size: 0.82rem;
+  padding: 10px 8px;
 }
 
 .score-summary {

@@ -17,14 +17,27 @@
       <header class="hero">
         <span class="bee" aria-hidden="true">🐝</span>
         <h1>Spell Bee</h1>
-        <p class="tagline">Hear the clue. Spell the word. Win the round.</p>
+        <p class="tagline">Hear the word. Spell it letter by letter. Just like a real bee!</p>
       </header>
 
       <label class="field-label" for="level">Difficulty</label>
       <select id="level" class="select">
-        <option value="easy">Easy</option>
+        <option value="kids" selected>Kids (ages 5–8) — simple words</option>
+        <option value="easy">Easy (older children)</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
+      </select>
+
+      <label class="field-label" for="english">English voice</label>
+      <select id="english" class="select">
+        <option value="en-GB" selected>British English</option>
+        <option value="en-US">American English</option>
+      </select>
+
+      <label class="field-label" for="sound-mode">Sound</label>
+      <select id="sound-mode" class="select">
+        <option value="clear" selected>Clear &amp; loud (slower, says word twice)</option>
+        <option value="normal">Normal speed</option>
       </select>
 
       <label class="field-label" for="count">Words per round</label>
@@ -34,8 +47,16 @@
         <option value="15">15</option>
       </select>
 
+      <label class="field-label" for="source">Word source</label>
+      <select id="source" class="select">
+        <option value="local" selected>Simple word list (best for kids)</option>
+        <option value="online">Internet (adults / older kids only)</option>
+      </select>
+
+      <p id="word-bank-info" class="word-bank-info"></p>
+
       <button type="button" id="btn-start" class="btn btn-primary">Start round</button>
-      <p class="hint">Works on Android &amp; iPhone in Chrome or Safari. Add to Home Screen for quick access.</p>
+      <p class="hint"><strong>For your child:</strong> use <strong>Kids</strong> + <strong>Simple word list</strong>. Internet mode uses random adult words (often American).</p>
     </section>
 
     <!-- Game -->
@@ -45,17 +66,24 @@
       </div>
       <p id="progress-text" class="progress-text">Word 1 of 10</p>
 
-      <div class="card">
-        <p class="label">Definition</p>
-        <p id="definition" class="clue"></p>
-        <p class="label">Sentence</p>
-        <p id="sentence" class="clue sentence"></p>
-        <p id="length-hint" class="length-hint"></p>
+      <p class="volume-tip">🔊 Turn your phone or PC volume <strong>all the way up</strong></p>
+
+      <div class="word-stage">
+        <p class="stage-label">Pronouncer says</p>
+        <button type="button" id="btn-hear-word" class="btn-hear">🔊 Hear the word (LOUD)</button>
+        <p id="speaking-status" class="speaking-status" aria-live="polite"></p>
+        <p class="stage-note">The word is hidden — listen, then spell it below.</p>
       </div>
 
-      <div class="actions-row">
-        <button type="button" id="btn-speak" class="btn btn-small" title="Hear definition">🔊 Hear</button>
-        <button type="button" id="btn-hint" class="btn btn-small">💡 Hint</button>
+      <div class="actions-row actions-row-2">
+        <button type="button" id="btn-repeat" class="btn btn-small">🔁 Repeat</button>
+        <button type="button" id="btn-definition" class="btn btn-small">📖 Definition</button>
+        <button type="button" id="btn-sentence" class="btn btn-small">💬 Sentence</button>
+      </div>
+
+      <div id="clue-panel" class="clue-panel hidden">
+        <p id="clue-label" class="label"></p>
+        <p id="clue-text" class="clue-text"></p>
       </div>
 
       <label class="field-label" for="answer">Your spelling</label>
@@ -68,10 +96,10 @@
         autocorrect="off"
         spellcheck="false"
         enterkeyhint="go"
-        placeholder="Type the word here"
+        placeholder="Type the letters, e.g. planet"
       />
 
-      <button type="button" id="btn-submit" class="btn btn-primary">Submit</button>
+      <button type="button" id="btn-submit" class="btn btn-primary">Submit spelling</button>
       <button type="button" id="btn-quit" class="btn btn-ghost">Quit round</button>
     </section>
 
