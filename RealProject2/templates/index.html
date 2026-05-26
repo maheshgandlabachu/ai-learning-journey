@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Spell Bee" />
+  <meta name="theme-color" content="#2d1b4e" />
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}" />
+  <title>Spell Bee</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <!-- Home -->
+    <section id="screen-home" class="screen active">
+      <header class="hero">
+        <span class="bee" aria-hidden="true">🐝</span>
+        <h1>Spell Bee</h1>
+        <p class="tagline">Hear the clue. Spell the word. Win the round.</p>
+      </header>
+
+      <label class="field-label" for="level">Difficulty</label>
+      <select id="level" class="select">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <label class="field-label" for="count">Words per round</label>
+      <select id="count" class="select">
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="15">15</option>
+      </select>
+
+      <button type="button" id="btn-start" class="btn btn-primary">Start round</button>
+      <p class="hint">Works on Android &amp; iPhone in Chrome or Safari. Add to Home Screen for quick access.</p>
+    </section>
+
+    <!-- Game -->
+    <section id="screen-game" class="screen">
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+      <p id="progress-text" class="progress-text">Word 1 of 10</p>
+
+      <div class="card">
+        <p class="label">Definition</p>
+        <p id="definition" class="clue"></p>
+        <p class="label">Sentence</p>
+        <p id="sentence" class="clue sentence"></p>
+        <p id="length-hint" class="length-hint"></p>
+      </div>
+
+      <div class="actions-row">
+        <button type="button" id="btn-speak" class="btn btn-small" title="Hear definition">🔊 Hear</button>
+        <button type="button" id="btn-hint" class="btn btn-small">💡 Hint</button>
+      </div>
+
+      <label class="field-label" for="answer">Your spelling</label>
+      <input
+        id="answer"
+        class="input"
+        type="text"
+        autocomplete="off"
+        autocapitalize="none"
+        autocorrect="off"
+        spellcheck="false"
+        enterkeyhint="go"
+        placeholder="Type the word here"
+      />
+
+      <button type="button" id="btn-submit" class="btn btn-primary">Submit</button>
+      <button type="button" id="btn-quit" class="btn btn-ghost">Quit round</button>
+    </section>
+
+    <!-- Results -->
+    <section id="screen-results" class="screen">
+      <header class="hero small">
+        <span class="bee">🏆</span>
+        <h1>Round complete!</h1>
+        <p id="score-summary" class="score-summary"></p>
+      </header>
+
+      <ul id="results-list" class="results-list"></ul>
+
+      <button type="button" id="btn-again" class="btn btn-primary">Play again</button>
+      <button type="button" id="btn-home" class="btn btn-ghost">Home</button>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "easy": [
+    {"word": "cat", "definition": "A small furry animal often kept as a pet.", "sentence": "The ___ sat on the mat."},
+    {"word": "sun", "definition": "The star that gives Earth light and heat.", "sentence": "The ___ is bright today."},
+    {"word": "book", "definition": "Pages bound together for reading.", "sentence": "She read a ___ before bed."},
+    {"word": "tree", "definition": "A tall plant with a trunk and branches.", "sentence": "A bird built a nest in the ___."},
+    {"word": "rain", "definition": "Water falling from clouds.", "sentence": "We stayed inside because of the ___."},
+    {"word": "fish", "definition": "An animal that lives in water and has fins.", "sentence": "We saw a gold ___ in the bowl."},
+    {"word": "milk", "definition": "A white drink that comes from cows.", "sentence": "He poured ___ on his cereal."},
+    {"word": "hand", "definition": "The part of your body at the end of your arm.", "sentence": "Raise your ___ if you know the answer."},
+    {"word": "bird", "definition": "An animal with feathers and wings.", "sentence": "A ___ sang in the morning."},
+    {"word": "cake", "definition": "A sweet baked dessert.", "sentence": "She blew out the candles on her ___."},
+    {"word": "door", "definition": "A movable barrier used to open or close an entrance.", "sentence": "Please close the ___ quietly."},
+    {"word": "star", "definition": "A bright point of light in the night sky.", "sentence": "We wished on a shooting ___."}
+  ],
+  "medium": [
+    {"word": "planet", "definition": "A large body in space that orbits a star.", "sentence": "Earth is the third ___ from the Sun."},
+    {"word": "garden", "definition": "A piece of land where plants and flowers grow.", "sentence": "Vegetables grow in our back ___."},
+    {"word": "muscle", "definition": "Body tissue that helps you move.", "sentence": "Exercise can make a ___ stronger."},
+    {"word": "oxygen", "definition": "A gas that humans need to breathe.", "sentence": "Plants release ___ into the air."},
+    {"word": "puzzle", "definition": "A game or problem that tests your thinking.", "sentence": "She solved the crossword ___."},
+    {"word": "village", "definition": "A small community in a rural area.", "sentence": "The ___ had one school and a shop."},
+    {"word": "courage", "definition": "The ability to face fear or difficulty.", "sentence": "It took ___ to speak in front of the class."},
+    {"word": "harvest", "definition": "The gathering of crops when they are ripe.", "sentence": "Farmers work hard during the ___ season."},
+    {"word": "journey", "definition": "Travel from one place to another.", "sentence": "Their ___ across the country took a week."},
+    {"word": "silence", "definition": "The complete absence of sound.", "sentence": "The library was filled with ___."},
+    {"word": "weather", "definition": "The condition of the atmosphere at a place and time.", "sentence": "Check the ___ before you pack."},
+    {"word": "balance", "definition": "An even distribution or stability.", "sentence": "She lost her ___ on the icy sidewalk."}
+  ],
+  "hard": [
+    {"word": "rhythm", "definition": "A strong, regular repeated pattern of sounds or movement.", "sentence": "The drummer kept a steady ___."},
+    {"word": "acquire", "definition": "To gain or obtain something.", "sentence": "Students ___ new skills through practice."},
+    {"word": "bureau", "definition": "An office or department for a specific purpose.", "sentence": "She contacted the tourist ___ for maps."},
+    {"word": "conscience", "definition": "An inner sense of right and wrong.", "sentence": "His ___ told him to tell the truth."},
+    {"word": "mnemonic", "definition": "A device such as a pattern of letters that aids memory.", "sentence": "ROY G. BIV is a ___ for rainbow colors."},
+    {"word": "pharaoh", "definition": "A ruler in ancient Egypt.", "sentence": "The ___ was buried in a grand tomb."},
+    {"word": "questionnaire", "definition": "A set of written questions for gathering information.", "sentence": "Please fill out the ___ before the interview."},
+    {"word": "receipt", "definition": "A written proof that payment was made.", "sentence": "Keep the ___ in case you need a refund."},
+    {"word": "separate", "definition": "To divide or keep apart; not joined.", "sentence": "Sort the laundry into ___ piles."},
+    {"word": "technique", "definition": "A way of carrying out a particular task.", "sentence": "The chef taught a new cooking ___."},
+    {"word": "yacht", "definition": "A medium-sized sailing boat used for pleasure.", "sentence": "They sailed the ___ along the coast."},
+    {"word": "zucchini", "definition": "A long green summer squash.", "sentence": "She grilled ___ from the garden."}
+  ]
+}

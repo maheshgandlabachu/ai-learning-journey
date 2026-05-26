@@ -1,0 +1,259 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #1a1028;
+  --surface: #2d1b4e;
+  --surface2: #3d2868;
+  --accent: #ffc93c;
+  --accent2: #ff9f1c;
+  --text: #f5f0ff;
+  --muted: #b8a8d4;
+  --ok: #5ee08a;
+  --bad: #ff6b8a;
+  --radius: 14px;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(160deg, #1a1028 0%, #2d1b4e 50%, #1a2840 100%);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+  min-height: 100dvh;
+}
+
+.screen {
+  display: none;
+  animation: fade 0.25s ease;
+}
+
+.screen.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hero.small {
+  margin-bottom: 20px;
+}
+
+.bee {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  color: var(--muted);
+  margin: 8px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.select,
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1.05rem;
+  border: 2px solid var(--surface2);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  margin-bottom: 16px;
+  min-height: 48px;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #2a1040;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 2px solid var(--surface2);
+}
+
+.btn-small {
+  width: auto;
+  flex: 1;
+  min-height: 44px;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  background: var(--surface2);
+  color: var(--text);
+}
+
+.hint {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--surface2);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 14px;
+  border: 1px solid var(--surface2);
+}
+
+.card .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.clue {
+  margin: 0 0 14px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.clue.sentence {
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.length-hint {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.actions-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.score-summary {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 8px 0 0;
+}
+
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.results-list li {
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  font-size: 0.92rem;
+  border-left: 4px solid var(--surface2);
+}
+
+.results-list li.ok {
+  border-left-color: var(--ok);
+}
+
+.results-list li.bad {
+  border-left-color: var(--bad);
+}
+
+.results-list strong {
+  display: block;
+  margin-bottom: 4px;
+}

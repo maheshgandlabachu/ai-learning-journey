@@ -1,0 +1,10 @@
+{
+  "name": "Spell Bee",
+  "short_name": "SpellBee",
+  "description": "Spelling practice game",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1028",
+  "theme_color": "#2d1b4e",
+  "orientation": "portrait"
+}

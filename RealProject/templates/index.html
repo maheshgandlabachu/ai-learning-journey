@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#1a1a2e" />
+  <title>Chess App</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Chess</h1>
+      <p id="status" class="status">Loading…</p>
+    </header>
+
+    <main class="board-wrap">
+      <div id="board" class="board" aria-label="Chess board"></div>
+    </main>
+
+    <div class="coords files" aria-hidden="true">
+      <span>a</span><span>b</span><span>c</span><span>d</span>
+      <span>e</span><span>f</span><span>g</span><span>h</span>
+    </div>
+
+    <footer class="controls">
+      <button type="button" id="btn-undo" class="btn">Undo</button>
+      <button type="button" id="btn-new" class="btn btn-primary">New game</button>
+    </footer>
+
+    <p class="hint">Tap a piece, then tap a highlighted square to move. Works on phone, Mac, and Windows.</p>
+  </div>
+
+  <div id="promo-modal" class="modal hidden" role="dialog" aria-labelledby="promo-title">
+    <div class="modal-box">
+      <h2 id="promo-title">Promote pawn to</h2>
+      <div class="promo-btns">
+        <button type="button" data-piece="q" class="btn promo-btn">Queen</button>
+        <button type="button" data-piece="r" class="btn promo-btn">Rook</button>
+        <button type="button" data-piece="b" class="btn promo-btn">Bishop</button>
+        <button type="button" data-piece="n" class="btn promo-btn">Knight</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
