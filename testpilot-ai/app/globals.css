@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-output,
+  .print-output * {
+    visibility: visible;
+  }
+  .print-output {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
